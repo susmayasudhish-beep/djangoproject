@@ -1,0 +1,126 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Feane | Restaurant</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Feane Custom CSS -->
+    <link rel="stylesheet"
+          href="{% static 'css/home.css' %}">
+</head>
+
+<body>
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+    <nav class="navbar">
+
+        <a href="{% url 'home' %}" class="logo">
+            Feane
+        </a>
+
+        <div class="nav-links">
+            <a href="{% url 'home' %}" class="active">HOME</a>
+            <a href="{% url 'menu' %}">MENU</a>
+            <a href="{% url 'about' %}">ABOUT</a>
+            <a href="{% url 'book' %}">BOOK TABLE</a>
+        </div>
+
+        <div class="nav-actions">
+
+            <a href="{% url 'login' %}" title="Login">
+                <i class="fa-solid fa-user"></i>
+            </a>
+
+            <a href="{% url 'cart' %}" title="Cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+
+            <a href="{% url 'menu' %}" class="order-btn">
+                Order Online
+            </a>
+
+        </div>
+
+    </nav>
+
+    <div class="hero-content">
+
+        <div class="hero-text">
+
+            <h1>Fast Food Restaurant</h1>
+
+            <p>
+               Hungry? Order your favorite burgers and fries online and get them fresh, hot and fast at your door.
+            </p>
+
+            <a href="{% url 'menu' %}" class="order-btn">
+                Order Now
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="slider-dots">
+        <span></span>
+        <span class="selected"></span>
+        <span></span>
+    </div>
+
+</section>
+
+<!-- OFFERS SECTION -->
+<section class="offers">
+
+    <div class="offer-card">
+        <div class="offer-image">
+            <img src="{% static 'images/o1.jpg' %}"
+                 alt="Burger offer">
+        </div>
+
+        <div class="offer-details">
+            <h2>Tasty Thursdays</h2>
+            <h3>20% <small>Off</small></h3>
+
+            <a href="{% url 'menu' %}" class="order-btn">
+                Order Now <i class="fa fa-shopping-cart"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="offer-card">
+        <div class="offer-image">
+            <img src="{% static 'images/o2.jpg' %}"
+                 alt="Pizza offer">
+        </div>
+
+        <div class="offer-details">
+            <h2>Pizza Days</h2>
+            <h3>15% <small>Off</small></h3>
+
+            <a href="{% url 'menu' %}" class="order-btn">
+                Order Now <i class="fa fa-shopping-cart"></i>
+            </a>
+        </div>
+    </div>
+
+</section>
+
+</body>
+</html>
